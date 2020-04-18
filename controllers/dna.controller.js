@@ -56,6 +56,7 @@ exports.findAll = (req, res) => {
         res.send(data.map(item => ({
                 id: item.id,
                 dna: JSON.parse(item.body),
+                mutation: item.mutation,
                 createdAt: item.createdAt
             }))
         )
